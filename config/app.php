@@ -58,6 +58,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Skip license/domain check (e.g. for local development)
+    |--------------------------------------------------------------------------
+    |
+    | When true, external license/domain validation is skipped. Set to true
+    | locally if you see "Domain not registered with your license! Please
+    | Activate it first." (e.g. via SKIP_LICENSE_DOMAIN_CHECK=true in .env).
+    |
+    */
+
+    'skip_license_domain_check' => env('SKIP_LICENSE_DOMAIN_CHECK', env('APP_ENV') === 'local'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application URL
     |--------------------------------------------------------------------------
     |

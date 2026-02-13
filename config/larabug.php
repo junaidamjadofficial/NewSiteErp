@@ -50,6 +50,7 @@ return [
     |
     */
 
+    // Only send to LaraBug in production (never in local — avoids "Domain not registered" etc.)
     'environments' => [
         'production',
     ],
