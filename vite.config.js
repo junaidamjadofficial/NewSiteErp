@@ -2,9 +2,9 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'node:path';
-import { glob } from 'glob';
+import { globSync } from 'glob';
 
-const workdoPackages = glob.sync('packages/workdo/*/src/Resources/js/app.tsx');
+const workdoPackages = globSync('packages/workdo/*/src/Resources/js/app.tsx');
 
 export default defineConfig({
     base: './',
